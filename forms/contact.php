@@ -14,6 +14,7 @@
   } else {
     die( 'Unable to load the "PHP Email Form" Library!');
   }
+  //condisi load php
 
   $contact = new PHP_Email_Form;
   $contact->ajax = true;
@@ -36,6 +37,7 @@
   $contact->add_message( $_POST['name'], 'From');
   $contact->add_message( $_POST['email'], 'Email');
   $contact->add_message( $_POST['message'], 'Message', 10);
+  //untuk adding message
 
   echo $contact->send();
 ?>
